@@ -12,6 +12,11 @@ pipeline {
                 bat 'npm install'
             }
         }
+        satge('inicia serverest'){
+            steps{
+                bat 'start /B npm start'
+            }
+        }
         stage('executa testes'){
             steps{
                 bat 'set NO_COLOR=1 npm run cy:run'
